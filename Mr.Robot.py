@@ -14,9 +14,9 @@ time.sleep(35)
 
 for index, row in df.iterrows():
     try:
-        notas = chrome.find_element(By.XPATH, '') #insira o XPATH aqui
-        notas.clear()
-        notas.send_keys(row['Nome da coluna'])
+        elemento = chrome.find_element(By.XPATH, '') #insira o XPATH aqui
+        elemento.clear()
+        elemento.send_keys(row['Nome da coluna'])
     except Exception as e:
         print(f"Erro ao encontrar o elemento pelo XPath: {e}")
         continue
